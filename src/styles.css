@@ -8,6 +8,13 @@
 body {
     background-image: linear-gradient(to right, violet, cyan);
     line-height: 1.4;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    margin-top: 15px;
+    width: 90%;
 }
 
 a {
