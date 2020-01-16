@@ -1,0 +1,31 @@
+.main {
+    background: #f4f4f4;
+    
+}
+
+.title {
+    margin-left: 10px;
+}
+
+p {
+    margin-left: 10px;
+}
+
+input {
+    margin-left: 10px;
+    margin-top: 5px;
+    width: 86vw;
+    border: 1px solid lightgray;
+}
+
+.addbtn {
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    width: 86vw;
+    background: rgb(223, 20, 223);
+    color: white;
+    border: none;
+    height: 20px;
+
+}
