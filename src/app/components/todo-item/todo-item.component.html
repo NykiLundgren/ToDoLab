@@ -1,8 +1,8 @@
 <div [ngClass]= 'setClasses()'>
     <p>
-        <button class= 'complete'>complete</button>
+        <button (click)= 'onComplete(todo)' class= 'complete'>complete</button>
         {{ todo.title }}
-        <button class= 'del'>x</button>
+        <button (click)= 'onDelete(todo)' class= 'del'>x</button>
     </p>
     
 </div>
