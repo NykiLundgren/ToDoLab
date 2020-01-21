@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: linear-gradient(to right, violet, cyan);
+    background-image: linear-gradient(to right, #f857a6, #ff5858);
     line-height: 1.4;
     display: flex;
     justify-content: center;
@@ -17,20 +17,7 @@ form {
     width: 90%;
 }
 
-a {
-    color: #333;
-    text-decoration: none;
-}
-
 .container {
     padding: 0 1rem;
-}
-
-.btn {
-    display: inline-block;
-    border: none;
-    background: #555;
-    color: white;
-    padding: 7px 20px;
 }
 
