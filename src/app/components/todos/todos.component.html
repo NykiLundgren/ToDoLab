@@ -1,7 +1,7 @@
 <app-todo-item 
-*ngFor= 'let todo of todos' 
+*ngFor= 'let todo of todos | filter: term' 
 [todo]= 'todo'
 (deleteTodo)='deleteTodo($event)'
 >
 </app-todo-item>
-<app-add-todo></app-add-todo>
+<app-add-todo (addTodo)='addTodo($event)'></app-add-todo>

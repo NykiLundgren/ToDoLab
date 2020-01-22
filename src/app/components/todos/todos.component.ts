@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo } from '../../models/Todo';
 import { TodoService } from '../../services/todo.service';
+import { FilterPipe } from '../../filter.pipe';
 
 @Component({
   selector: 'app-todos',
   templateUrl: './todos.component.html',
-  styleUrls: ['./todos.component.css']
+  styleUrls: ['./todos.component.css'],
+  providers: [FilterPipe]
 })
 export class TodosComponent implements OnInit {
   todos: Todo[];
 
-  constructor(private todoService: TodoService) { }
+  constructor(private todoService: TodoService, private filter: FilterPipe) { }
 
   ngOnInit() {
     this.todoService.getTodos().subscribe(todos => {
@@ -24,5 +26,11 @@ export class TodosComponent implements OnInit {
     this.todos = this.todos.filter(t => t.id !== todo.id);
     //Server
     this.todoService.deleteTodo(todo).subscribe();
+  }
+
+  addTodo(todo:Todo){
+    this.todoService.addTodo(todo).subscribe(todo => {
+      this.todos.push(todo);
+    });
   }
 }
