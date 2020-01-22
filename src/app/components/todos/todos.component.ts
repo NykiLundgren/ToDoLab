@@ -16,7 +16,38 @@ export class TodosComponent implements OnInit {
 
   ngOnInit() {
     this.todoService.getTodos().subscribe(todos => {
-      this.todos = todos;
+      this.todos = [
+        {
+          id: 1,
+          title: 'fold laundry',
+          completed: false
+        },
+        {
+          id: 2,
+          title: 'put clothes in dresser',
+          completed: false
+        },
+        {
+          id: 3,
+          title: 'relax',
+          completed: false
+        },
+        {
+          id: 4,
+          title: 'try to pet cat',
+          completed: true
+        },
+        {
+          id: 5,
+          title: 'pet dog',
+          completed: false
+        },
+        {
+          id: 6,
+          title: 'be awesome',
+          completed: true
+        }
+      ]
     });
     
   }
